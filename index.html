@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Satyam Sahu — Full Stack Java Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <!-- Lucide icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+
+  <!-- ======================================================
+       NAVBAR
+  ====================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">SS<span class="dot">.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <!-- Mobile-only actions (appear in hamburger menu) -->
+        <li class="mobile-only-action"><a href="resume.pdf" class="nav-link">Resume</a></li>
+        <li class="mobile-only-action"><a href="#" id="navCertToggle" class="nav-link">Certifications</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Dark / Light toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="toggle-icon" id="themeIcon">
+            <i data-lucide="moon" class="icon-moon"></i>
+            <i data-lucide="sun" class="icon-sun"></i>
+          </span>
+        </button>
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======================================================
+       HERO
+  ====================================================== -->
+  <section class="hero" id="hero">
+    <!-- Animated background grid -->
+    <div class="hero-grid" aria-hidden="true"></div>
+    <!-- Floating blobs -->
+    <div class="blob blob-1" aria-hidden="true"></div>
+    <div class="blob blob-2" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <!-- Profile picture -->
+      <div class="hero-avatar-wrap">
+        <div class="hero-avatar">
+        <img src="satyam.jpg.webp" alt="Satyam Sahu" class="avatar-img" />
+          <div class="avatar-ring"></div>
+          <div class="avatar-ring ring-2"></div>
+        </div>
+        <div class="status-badge">
+          <span class="status-dot"></span> Open to Work
+        </div>
+      </div>
+
+      <!-- Text block -->
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">SATYAM SAHU<span class="cursor-blink">|</span></h1>
+        <h2 class="hero-title">
+          Full Stack <span class="accent">Java Developer</span>
+        </h2>
+        <!-- Typing animation target -->
+        <p class="hero-tagline">
+          I build <span class="typed-text" id="typedText"></span><span class="typed-cursor">|</span>
+        </p>
+
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary">
+            <i data-lucide="send" class="btn-icon"></i> Hire Me
+          </a>
+          <a href="resume.pdf" class="btn btn-outline hide-mobile" download>
+            <i data-lucide="download" class="btn-icon"></i> Download Resume
+          </a>
+          <a href="#" id="certToggle" class="btn btn-outline hide-mobile">
+            <i data-lucide="award" class="btn-icon"></i> My Certifications
+          </a>
+        </div>
+
+        <!-- Quick stats -->
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">4+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">2+</span>
+            <span class="stat-label">Years Learning</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CERTIFICATIONS
+  ====================================================== -->
+  <section class="section certifications-section hidden" id="certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Certifications</span>
+        <h2 class="section-title">Verified Credentials</h2>
+      </div>
+
+      <div class="certifications-actions">
+        <button type="button" id="closeCerts" class="btn btn-outline btn-sm">Hide Certifications</button>
+      </div>
+
+      <div class="certifications-grid reveal">
+        <article class="cert-card">
+          <h3 class="cert-card-title">DSA with Java</h3>
+          <span class="cert-card-meta">Apna College · 2024</span>
+          <p>Completed DSA with Java through Apna College, demonstrating strong problem solving, data structure mastery, and algorithmic thinking built on Java fundamentals.</p>
+          <a href="#" class="cert-card-link cert-view" data-src="certificate.jpg" data-caption="DSA with Java Certificate" rel="noopener">
+            View Certificate
+          </a>
+        </article>
+
+        <article class="cert-card">
+          <h3 class="cert-card-title">Java Programming Fundamentals</h3>
+          <span class="cert-card-meta">Infosys · 2026</span>
+          <p>Completed Java Programming Fundamentals through Infosys Springboard, covering core Java concepts, OOP design, and practical problem solving for backend development.</p>
+          <a href="#" class="cert-card-link cert-view" data-src="javacertificate.jpg" data-caption="Java Programming Fundamentals Certificate" rel="noopener">
+            View Certificate
+          </a>
+        </article>
+
+        <article class="cert-card">
+          <h3 class="cert-card-title">SQL Certification</h3>
+          <span class="cert-card-meta">—</span>
+          <p>Practical SQL skills validated with course completion. Click to view the certificate.</p>
+          <a href="#" class="cert-card-link cert-view" data-src="sql_certificate.jpg" data-caption="SQL Certification" rel="noopener">
+            View Certificate
+          </a>
+        </article>
+      </div>
+
+      <!-- Certificate modal (opens when user clicks "View Certificate") -->
+      <div id="certModal" class="cert-modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="cert-modal-backdrop" id="certBackdrop"></div>
+        <div class="cert-modal-body" role="document">
+          <button id="certClose" class="btn btn-sm btn-outline cert-close" aria-label="Close certificate">Close</button>
+          <div class="cert-frame">
+            <img id="certImage" src="" alt="Certificate image" />
+          </div>
+          <p class="cert-caption">DSA with Java — Apna College · 2024</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       ABOUT
+  ====================================================== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">About</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Image column -->
+        <div class="about-img-wrap reveal">
+          <img
+            src="https://placehold.co/500x600/0f172a/a78bfa?text=About+Me&font=syne"
+            alt="About Your Name"
+            class="about-img"
+          />
+          <div class="about-img-deco"></div>
+        </div>
+
+        <!-- Text column -->
+        <div class="about-text reveal">
+          <p class="about-lead">
+            I'm a passionate Full Stack Java Developer who loves transforming ideas
+            into elegant, performant web applications.
+          </p>
+          <p class="about-body">
+            With a strong foundation in both frontend and backend technologies, I specialise
+            in building end-to-end solutions using <strong>Java, Spring Boot</strong> on the server
+            and <strong>React, JavaScript</strong> on the client. I care deeply about clean code,
+            thoughtful UX, and writing software that actually solves problems.
+          </p>
+          <!-- Info chips -->
+          <ul class="about-chips">
+            <li><i data-lucide="map-pin" class="chip-icon"></i> Bhopal</li>
+            <li><i data-lucide="graduation-cap" class="chip-icon"></i>B.Tech</li>
+            <li><i data-lucide="briefcase" class="chip-icon"></i> Available for Hire</li>
+            <li><i data-lucide="languages" class="chip-icon"></i> English, Hindi</li>
+          </ul>
+
+          <a href="#contact" class="btn btn-primary mt-md">Let's Talk</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SKILLS
+  ====================================================== -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">02 / Skills</span>
+        <h2 class="section-title">Tech Stack</h2>
+      </div>
+
+      <!-- Category tabs -->
+      <div class="skills-tabs reveal">
+        <button class="tab-btn active" data-tab="all">All</button>
+        <button class="tab-btn" data-tab="frontend">Frontend</button>
+        <button class="tab-btn" data-tab="backend">Backend</button>
+        <button class="tab-btn" data-tab="tools">Tools</button>
+      </div>
+
+      <!-- Skill cards grid -->
+      <div class="skills-grid" id="skillsGrid">
+
+        <!-- Frontend -->
+        <div class="skill-card reveal" data-category="frontend">
+          <div class="skill-icon-wrap" style="--clr:#e34f26"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" /></div>
+          <div class="skill-info">
+            <span class="skill-name">HTML5</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="92"></div></div>
+            <span class="skill-pct">92%</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-category="frontend">
+          <div class="skill-icon-wrap" style="--clr:#264de4"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" /></div>
+          <div class="skill-info">
+            <span class="skill-name">CSS3</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="88"></div></div>
+            <span class="skill-pct">88%</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-category="frontend">
+          <div class="skill-icon-wrap" style="--clr:#f7df1e"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /></div>
+          <div class="skill-info">
+            <span class="skill-name">JavaScript</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="82"></div></div>
+            <span class="skill-pct">82%</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-category="frontend">
+          <div class="skill-icon-wrap" style="--clr:#61dafb"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" /></div>
+          <div class="skill-info">
+            <span class="skill-name">React</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="75"></div></div>
+            <span class="skill-pct">75%</span>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-card reveal" data-category="backend">
+          <div class="skill-icon-wrap" style="--clr:#007396"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" /></div>
+          <div class="skill-info">
+            <span class="skill-name">Java</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
+            <span class="skill-pct">85%</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-category="backend">
+          <div class="skill-icon-wrap" style="--clr:#6db33f"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" /></div>
+          <div class="skill-info">
+            <span class="skill-name">Spring Boot</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="78"></div></div>
+            <span class="skill-pct">78%</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-category="backend">
+          <div class="skill-icon-wrap" style="--clr:#4479a1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" /></div>
+          <div class="skill-info">
+            <span class="skill-name">MySQL</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div>
+            <span class="skill-pct">80%</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-card reveal" data-category="tools">
+          <div class="skill-icon-wrap" style="--clr:#f05032"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" /></div>
+          <div class="skill-info">
+            <span class="skill-name">Git</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="83"></div></div>
+            <span class="skill-pct">83%</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-category="tools">
+          <div class="skill-icon-wrap" style="--clr:#24292e"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" /></div>
+          <div class="skill-info">
+            <span class="skill-name">GitHub</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="83"></div></div>
+            <span class="skill-pct">83%</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       PROJECTS
+  ====================================================== -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">03 / Projects</span>
+        <h2 class="section-title">Selected Work</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: BookMyShow Clone -->
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img
+              src="https://placehold.co/600x360/1e1b4b/a78bfa?text=BookMyShow+Clone&font=syne"
+              alt="BookMyShow Clone project screenshot"
+              class="project-img"
+            />
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn" target="_blank" rel="noopener">
+                <i data-lucide="external-link"></i>
+              </a>
+            </div>
+            <div class="project-badge">Full Stack</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">BookMyShow Clone</h3>
+            <p class="project-desc">
+              A feature-rich movie ticket booking platform with user authentication,
+              seat selection, dynamic show listings, and payment flow — built with
+              React frontend and Spring Boot REST API backend.
+            </p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">REST API</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm btn-outline" target="_blank" rel="noopener">
+                <i data-lucide="github" class="btn-icon"></i> GitHub
+              </a>
+              <a href="#" class="btn btn-sm btn-primary" target="_blank" rel="noopener">
+                <i data-lucide="external-link" class="btn-icon"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Face Recognition -->
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img
+              src="https://placehold.co/600x360/0f172a/38bdf8?text=Face+Recognition&font=syne"
+              alt="Face Recognition project screenshot"
+              class="project-img"
+            />
+            <div class="project-overlay">
+              <a href="https://face-recognition-rag3.onrender.com/" class="overlay-btn" target="_blank" rel="noopener">
+                <i data-lucide="external-link"></i>
+              </a>
+            </div>
+            <div class="project-badge">Full Stack</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Face Recognition</h3>
+            <p class="project-desc">
+              A face recognition system built with React, Spring Boot, and MySQL,
+              powered by SQL-backed data handling and the LBP algorithm, with no
+              external face recognition library used.
+            </p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">SQL</span>
+              <span class="tag">LBP</span>
+            </div>
+            <div class="project-links">
+              <a href="https://face-recognition-rag3.onrender.com/" class="btn btn-sm btn-outline" target="_blank" rel="noopener">
+                <i data-lucide="external-link" class="btn-icon"></i> Project Link
+              </a>
+            <a href="https://face-recognition-rag3.onrender.com/" class="btn btn-sm btn-primary" target="_blank" rel="noopener">
+                <i data-lucide="external-link" class="btn-icon"></i> Open App
+              </a>
+            </div>
+          </div>
+          <a
+            href="https://face-recognition-rag3.onrender.com/"
+            class="project-card-link"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open Face Recognition project"
+          ></a>
+        </article>
+
+      </div>
+
+      <div class="projects-more reveal">
+        <a href="https://github.com/satyam7247" target="_blank" rel="noopener" class="btn btn-outline">
+          <i data-lucide="github" class="btn-icon"></i> View All on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       EXPERIENCE (optional)
+  ====================================================== -->
+  <section class="section experience-section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">04 / Experience</span>
+        <h2 class="section-title">My Journey</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Jan 2024 — Present</span>
+            <h3 class="timeline-role">Java Full Stack Intern</h3>
+            <p class="timeline-company"><i data-lucide="building-2" class="chip-icon"></i> [Company Name] · Remote</p>
+            <p class="timeline-desc">
+              Developed RESTful APIs with Spring Boot, integrated MySQL databases,
+              and built React-based dashboards. Collaborated in an Agile team and
+              participated in code reviews and sprint planning.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Spring Boot</span>
+              <span class="tag">React</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Agile</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Jun 2023 — Jun 2027</span>
+            <h3 class="timeline-role">B.Tech</h3>
+            <p class="timeline-company"><i data-lucide="graduation-cap" class="chip-icon"></i>Rajiv Gandhi Proudyogiki Vishwavidyalaya  [City - Bhopal]</p>
+            <p class="timeline-desc">
+              Completed degree with focus on Data Structures, OOPs, DBMS, and Web Technologies.
+              Built multiple academic projects and participated in hackathons.
+            </p>
+            <div class="project-tags">
+              <span class="tag">DSA</span>
+              <span class="tag">DBMS</span>
+              <span class="tag">OOPs</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CONTACT
+  ====================================================== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Get In Touch</h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Info column -->
+        <div class="contact-info reveal">
+          <p class="contact-lead">
+            Have a project in mind or want to discuss opportunities?
+            I'd love to hear from you. Drop a message and I'll get back within 24 hours.
+          </p>
+
+          <div class="contact-inline">
+            <a href="mailto:satyamsahu724729@gmail.com" class="contact-inline-link">
+              <i data-lucide="mail"></i>
+              <span class="contact-inline-text">satyamsahu724729@gmail.com</span>
+            </a>
+            <span class="contact-sep">·</span>
+            <a href="tel:+917247296710" class="contact-inline-link">
+              <i data-lucide="phone"></i>
+              <span class="contact-inline-text">+91-7247296710</span>
+            </a>
+            <span class="contact-sep">·</span>
+            <span class="contact-inline-link">
+              <i data-lucide="map-pin"></i>
+              <span class="contact-inline-text">Bhopal</span>
+            </span>
+          </div>
+
+          <!-- Social links -->
+          <div class="social-links">
+            <a href="https://github.com/satyam7247" target="_blank" rel="noopener" class="social-btn social-github" aria-label="GitHub">
+              <!-- GitHub Mark (monochrome, uses currentColor) -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.42-3.88-1.42-.53-1.36-1.3-1.72-1.3-1.72-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.75-1.56-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 2.92-.39c.99 0 1.99.13 2.92.39 2.22-1.49 3.2-1.18 3.2-1.18.63 1.65.23 2.87.11 3.17.75.81 1.2 1.84 1.2 3.1 0 4.42-2.7 5.39-5.27 5.67.42.36.8 1.07.8 2.15 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/satyam-sahu72" target="_blank" rel="noopener" class="social-btn social-linkedin" aria-label="LinkedIn">
+              <!-- LinkedIn 'in' mark (monochrome, uses currentColor) -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M20.45 20.45h-3.55v-5.2c0-1.24-.02-2.85-1.74-2.85-1.74 0-2.01 1.36-2.01 2.76v5.29H8.63V9h3.41v1.56h.05c.48-.9 1.65-1.85 3.4-1.85 3.63 0 4.3 2.39 4.3 5.49v6.8zM5.34 7.43a2.06 2.06 0 1 1 .01-4.12 2.06 2.06 0 0 1-.01 4.12zM7.13 20.45H3.55V9h3.58v11.45z"/>
+              </svg>
+            </a>
+            <!-- Twitter link removed -->
+          </div>
+        </div>
+
+        <!-- Form column -->
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Doe" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project / Opportunity / Just saying hi" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <i data-lucide="send" class="btn-icon"></i> Send Message
+            </button>
+            <p class="form-status" id="formStatus"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
